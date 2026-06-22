@@ -1,472 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sidhanth Prasad · PM Portfolio</title>
-  <meta name="description" content="Product Manager portfolio - Enterprise GenAI, B2B SaaS, Consumer Fintech." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, sans-serif; background: #F4F8FC; }
-    button { font-family: inherit; }
-    a { font-family: inherit; }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sidhanth Prasad · Product Manager</title>
+<meta name="description" content="Product Manager | Enterprise AI Products | 6+ Years Building Internal Tools, Data Products & AI Workflows"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:#060E1F;color:#E2E8F0;overflow-x:hidden}
+button,a{font-family:inherit}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#060E1F}
+::-webkit-scrollbar-thumb{background:#1C3050;border-radius:3px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.fade1{animation:fadeUp .5s .05s both}
+.fade2{animation:fadeUp .5s .15s both}
+.fade3{animation:fadeUp .5s .25s both}
+.fade4{animation:fadeUp .5s .35s both}
+.grid-bg{background-image:linear-gradient(rgba(14,165,201,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,201,.025) 1px,transparent 1px);background-size:56px 56px}
+nav{background:rgba(6,14,31,.97);backdrop-filter:blur(12px);border-bottom:1px solid #1C3050;position:sticky;top:0;z-index:100;padding:0 28px}
+.nav-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:54px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-box{width:32px;height:32px;background:linear-gradient(135deg,#0EA5C9,#0284C7);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;font-family:'JetBrains Mono',monospace;flex-shrink:0}
+.logo-title{font-size:13px;font-weight:600;color:#F1F5F9;display:block;line-height:1}
+.logo-sub{font-size:10px;color:#0EA5C9;display:block;line-height:1;margin-top:2px}
+.nav-links{display:flex;gap:2px}
+.nav-links button{background:none;border:none;cursor:pointer;font-size:12px;color:#64748B;padding:5px 10px;border-radius:6px;transition:all .15s}
+.nav-links button:hover{color:#E2E8F0;background:rgba(255,255,255,.05)}
+section{padding:56px 28px;border-bottom:1px solid #1C3050}
+section.alt{background:#0A1628}
+.inner{max-width:1040px;margin:0 auto}
+.sec-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0EA5C9;margin-bottom:6px}
+.sec-h{font-size:26px;font-weight:700;color:#F1F5F9;margin-bottom:6px}
+.sec-sub{font-size:13px;color:#64748B;margin-bottom:24px}
+ 
+/* HERO */
+.hero{padding:68px 28px 56px}
+.open-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;color:#10B981;letter-spacing:.1em;text-transform:uppercase;background:rgba(16,185,129,.1);padding:5px 14px;border-radius:20px;border:1px solid rgba(16,185,129,.25);margin-bottom:16px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:#10B981;animation:pulse 2s infinite;flex-shrink:0}
+h1{font-size:clamp(34px,5vw,54px);font-weight:800;color:#F1F5F9;letter-spacing:-.02em;line-height:1.1;margin-bottom:8px}
+.hero-role{font-size:13px;color:#64748B;font-family:'JetBrains Mono',monospace;margin-bottom:14px}
+.hero-desc{font-size:15px;color:#94A3B8;line-height:1.75;max-width:580px;margin-bottom:32px}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:680px;margin-bottom:32px}
+.stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px;text-align:center}
+.stat-n{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:600;color:#0EA5C9;line-height:1}
+.stat-l{font-size:10px;color:#64748B;margin-top:4px;line-height:1.3}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-p{display:inline-block;padding:10px 24px;border-radius:8px;background:linear-gradient(135deg,#0EA5C9,#0284C7);color:#fff;font-weight:600;font-size:13px;text-decoration:none;border:none;cursor:pointer;transition:all .2s}
+.btn-p:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(14,165,201,.4)}
+.btn-o{display:inline-block;padding:10px 24px;border-radius:8px;background:transparent;color:#E2E8F0;font-weight:600;font-size:13px;text-decoration:none;border:1px solid #1C3050;cursor:pointer;transition:all .2s}
+.btn-o:hover{border-color:#0EA5C9;color:#0EA5C9}
+ 
+/* PRODUCT CARDS */
+.prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pc{background:#0D1829;border:1px solid #1C3050;border-radius:16px;overflow:hidden;transition:all .25s;cursor:pointer}
+.pc:hover{border-color:rgba(14,165,201,.4);transform:translateY(-2px);box-shadow:0 8px 32px rgba(14,165,201,.08)}
+.pc-bar{height:3px}
+.pc-body{padding:22px 24px}
+.pc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;gap:10px}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px}
+.bdot{width:5px;height:5px;border-radius:50%}
+.pc-co{font-size:10px;color:#64748B;font-family:'JetBrains Mono',monospace;text-align:right;line-height:1.4}
+.pc-name{font-size:17px;font-weight:700;color:#F1F5F9;margin-bottom:14px;line-height:1.2}
+.prob-box{background:rgba(255,255,255,.03);border-radius:8px;padding:12px 14px;border-left:3px solid;margin-bottom:14px}
+.prob-lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;margin-bottom:4px}
+.prob-txt{font-size:12px;color:#CBD5E1;line-height:1.6}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.mini-box{background:rgba(255,255,255,.02);border:1px solid #1C3050;border-radius:8px;padding:10px 12px}
+.mini-lbl{font-size:9px;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px}
+.mini-txt{font-size:11px;color:#CBD5E1;line-height:1.5}
+.expand-btn{background:none;border:none;cursor:pointer;font-size:12px;font-weight:600;padding:0;transition:color .15s}
+.decisions-wrap{margin-top:12px}
+.dec-row{display:flex;gap:8px;margin-bottom:7px}
+.dec-arrow{font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px}
+.dec-txt{font-size:12px;color:#CBD5E1;line-height:1.6}
+.outcome-box{margin-top:10px;border-radius:8px;padding:10px 14px;border:1px solid}
+.out-lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+.out-txt{font-size:13px;font-weight:600;color:#E2E8F0;line-height:1.4}
+.pc-skills{padding:14px 24px;border-top:1px solid #1C3050;display:flex;gap:6px;flex-wrap:wrap}
+.stag{display:inline-block;font-size:10px;font-weight:500;padding:3px 8px;border-radius:5px}
+ 
+/* TABLE */
+.tbl-wrap{background:#0D1829;border-radius:16px;border:1px solid #1C3050;overflow:hidden}
+table{width:100%;border-collapse:collapse}
+th{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#64748B;padding:12px 16px;border-bottom:1px solid #1C3050;text-align:left}
+td{font-size:12px;color:#CBD5E1;padding:13px 16px;border-bottom:1px solid #0D1829}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(14,165,201,.03)}
+.td-name{font-weight:600;color:#F1F5F9!important;font-size:13px!important}
+.metric-pill{display:inline-flex;align-items:center;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);color:#10B981;border-radius:20px;padding:3px 10px;font-size:10px;font-weight:600;font-family:'JetBrains Mono',monospace}
+ 
+/* FRAMEWORK */
+.fw-steps{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.fw-step{border-radius:10px;padding:12px 14px;cursor:pointer;transition:all .2s;flex:1;min-width:70px;border:1px solid #1C3050;background:#0D1829;text-align:center}
+.fw-step-icon{font-size:20px;margin-bottom:5px}
+.fw-step-lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#64748B;transition:color .2s}
+.fw-content{border-radius:14px;padding:26px 30px}
+.fw-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.fw-icon{font-size:28px}
+.fw-step-name{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px}
+.fw-sub{font-size:10px;color:#64748B}
+.fw-text{font-size:14px;color:#CBD5E1;line-height:1.8}
+ 
+/* SKILLS */
+.skill-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.sf-btn{padding:5px 13px;border-radius:6px;border:1px solid #1C3050;background:#0D1829;color:#64748B;font-size:11px;font-weight:500;cursor:pointer;transition:all .15s}
+.skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.skill-card{background:#0D1829;border:1px solid #1C3050;border-radius:12px;padding:18px;transition:opacity .2s}
+.skill-card.dim{opacity:.2}
+.skill-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;margin-bottom:12px}
+.chip{display:inline-block;font-size:10px;font-weight:500;padding:3px 9px;border-radius:5px;margin:2px}
+ 
+/* EDU */
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.edu-card{background:#0D1829;border:1px solid #1C3050;border-radius:12px;padding:18px;border-top:2px solid}
+.edu-icon-box{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;margin-bottom:12px}
+.edu-name{font-size:13px;font-weight:700;color:#F1F5F9;margin-bottom:3px}
+.edu-course{font-size:11px;font-weight:500}
+ 
+/* TL */
+.tl-card{background:#0D1829;border:1px solid #1C3050;border-radius:14px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.tl-link{padding:9px 18px;border-radius:8px;background:rgba(14,165,201,.1);color:#0EA5C9;font-weight:600;font-size:12px;text-decoration:none;border:1px solid rgba(14,165,201,.25);white-space:nowrap;transition:all .2s}
+.tl-link:hover{background:rgba(14,165,201,.2)}
+ 
+/* CONTACT */
+.contact-sec{padding:64px 28px;text-align:center}
+.contact-h{font-size:34px;font-weight:800;color:#F1F5F9;margin-bottom:10px;letter-spacing:-.02em}
+.contact-sub{font-size:14px;color:#64748B;margin-bottom:36px;line-height:1.7}
+.contact-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer{background:#030912;padding:14px 28px;text-align:center;border-top:1px solid #1C3050}
+footer p{font-size:10px;color:#1C3050;font-family:'JetBrains Mono',monospace}
+</style>
 </head>
 <body>
-  <div id="root"></div>
-
-  <script type="text/babel">
-    const { useState } = React;
-
-    const NAVY="#0F2744",CYAN="#0EA5C9",LCYAN="#E0F4FA",BG="#F4F8FC",
-          WHITE="#FFFFFF",MUTED="#64748B",TEXT="#1E293B",BORDER="#DDE6F0",
-          GREEN="#10B981",AMBER="#F59E0B",PURPLE="#7C3AED";
-
-    function scrollTo(id){
-      const el=document.getElementById(id);
-      if(el) el.scrollIntoView({behavior:"smooth",block:"start"});
-    }
-
-    function Tag({children,color=NAVY}){
-      return <span style={{display:"inline-block",fontSize:11,fontWeight:600,padding:"3px 10px",
-        borderRadius:6,border:`1px solid ${color}22`,background:`${color}12`,color}}>{children}</span>;
-    }
-
-    function Card({children,style={}}){
-      return <div style={{background:WHITE,borderRadius:14,border:`1px solid ${BORDER}`,
-        boxShadow:"0 2px 12px rgba(15,39,76,0.06)",...style}}>{children}</div>;
-    }
-
-    const NAV=[
-      {label:"About",id:"about"},{label:"Experience",id:"experience"},
-      {label:"Builds",id:"builds"},{label:"Skills",id:"skills"},
-      {label:"Education",id:"education"},{label:"Contact",id:"contact"},
-    ];
-
-    const CASES=[
-      {id:"erm",label:"Enterprise AI @ Consulting Client",emoji:"🏗️",
-       company:"Greychain AI (Embedded at Global Consulting Firm)",role:"Product Analyst Lead (Embedded)",period:"Current",accent:NAVY,
-       summary:"Embedded PM delivering two live enterprise GenAI products for a global top-5 environmental and sustainability consultancy.",
-       context:"The client needed a PM to own execution for two enterprise GenAI products - an AI-assisted report drafting tool and a document intelligence platform - both with active enterprise users and ongoing sprint cycles.",
-       items:[
-         {icon:"📋",text:"Ran sprint planning across two Jira boards - writing, sizing, and prioritising tickets in sync with the engineering team each cycle."},
-         {icon:"📝",text:"Produced all product documentation: user guides, UAT release notes, sprint runbooks, and go-live checklists for both products."},
-         {icon:"🔗",text:"Acted as the communication layer between engineering and client stakeholders - translating technical progress into business-readable updates and vice versa."},
-         {icon:"🔍",text:"Identified a 9-step fully manual SharePoint provisioning chain as an operational risk, documented the full flow, and helped scope Jira tickets for an automation fix."},
-         {icon:"🐛",text:"Supported bug investigations by documenting symptoms, user impact, and reproduction steps - then coordinating fix priorities with the engineering team."},
-         {icon:"📦",text:"Built a complete KT document mid-engagement from scratch with zero prior context - productive within days of onboarding."},
-       ],
-       skills:["Sprint Planning","Jira","User Guides","UAT","Stakeholder Comms","Process Docs","Go-live Planning"]},
-      {id:"process",label:"Fixing Operational Debt",emoji:"⚙️",
-       company:"Greychain AI (Embedded at Global Consulting Firm)",role:"Process Improvement Initiative",period:"2024–25",accent:PURPLE,
-       summary:"Identified and scoped a fix for a critical manual bottleneck blocking consultant access to projects.",
-       context:"Every new project triggered a 9-step fully manual SharePoint provisioning chain - no SLA, no assigned owner, no automated fallback. A single missed step could block consultants for days.",
-       items:[
-         {icon:"🗺️",text:"Mapped the complete as-is flow from project creation through to SharePoint folder access - made the full 9-step chain visible for the first time."},
-         {icon:"🚨",text:"Flagged it as a go-live risk to both engineering and client stakeholders, framing impact in terms of consultant downtime rather than technical debt."},
-         {icon:"🎟️",text:"Helped scope 4 Jira tickets to automate the chain - trigger logic, provisioning, error handling, admin visibility - working with engineering on feasibility."},
-         {icon:"📊",text:"Produced the before/after comparison document used in stakeholder sign-off conversations."},
-       ],
-       skills:["Process Mapping","Risk Identification","Jira Scoping","Stakeholder Framing","Documentation"]},
-      {id:"grow",label:"growwithsid.com",emoji:"✍️",
-       company:"growwithsid.com",role:"Founder & Editor",period:"Ongoing",accent:CYAN,
-       summary:"AI and tech intelligence publication for founders, operators, and investors - built and run solo.",
-       context:"Started as a way to think publicly about AI products and market shifts. Grew into a structured editorial operation with its own publishing pipeline, content calendar, and LinkedIn distribution.",
-       items:[
-         {icon:"🧭",text:"Defined the editorial strategy - what gets covered, at what depth, and for whom. Deliberate founder/operator audience, not general tech news."},
-         {icon:"🔬",text:"Research and write original analysis on AI product trends, tools, and frameworks - structured takes with a real point of view, not summaries."},
-         {icon:"📐",text:"Built and maintain the full publishing pipeline: research → draft → format → publish → LinkedIn distribution."},
-         {icon:"🚀",text:"Used as the distribution channel for side product launches, including buildinagent.com."},
-       ],
-       skills:["Editorial Strategy","AI Research","Content Production","LinkedIn Distribution","SEO"]},
-      {id:"finance",label:"Personal Finance App",emoji:"💸",
-       company:"Side Build - India Consumer",role:"Founder & PM",period:"In Progress",accent:GREEN,
-       summary:"MVP expense tracker for Indian users - lightweight, CSV-first, no bank API dependency.",
-       context:"Most finance apps for Indian users are either too complex or too narrow. The gap: a simple tracker handling UPI, EMIs, SIPs, and subscription creep without fintech compliance overhead.",
-       items:[
-         {icon:"🎯",text:"Scoped the MVP tightly: manual entry, CSV import, auto-categorisation, subscription scanner, goal/SIP tracker. Deliberately cut features adding compliance overhead."},
-         {icon:"🤔",text:"Made the call to use CSV over bank API for v1 - the right trade-off at this stage even though it limits automation."},
-         {icon:"⚡",text:"Defined the tech stack (React + Vite + Supabase + Capacitor) and designed for iOS + Android from day one."},
-         {icon:"🏷️",text:"Led naming research: explored Sanskrit wealth terms (oversaturated), landed in awareness/discipline register - Chetna, Sanyam - to reflect the behaviour-change angle."},
-         {icon:"📣",text:"Planned distribution via growwithsid.com readership and founder communities - no paid acquisition at MVP stage."},
-       ],
-       skills:["MVP Scoping","Consumer Fintech","Market Research","Tech Stack Decisions","Distribution Planning"]},
-    ];
-
-    const BUILDS=[
-      {name:"buildinagent.com",emoji:"🤖",
-       desc:"Token optimizer for LLM API developers. Spots prompt bloat and gives real-time compression suggestions. Working React MVP.",
-       status:"Shipped",statusColor:GREEN,tags:["React","Developer Tool","LLM APIs"],link:"https://buildinagent.com"},
-      {name:"Daylog",emoji:"📓",
-       desc:"Daily accountability journal with structured reflection prompts and streak tracking. Scoped for Play Store with full ASO plan.",
-       status:"Built",statusColor:GREEN,tags:["Consumer App","Mobile","Play Store"],link:null},
-      {name:"Personal Finance App",emoji:"💳",
-       desc:"Expense tracker for Indian users. CSV import, subscription scanner, SIP goal tracker. React + Supabase + Capacitor.",
-       status:"In Progress",statusColor:AMBER,tags:["Fintech","India","Cross-platform"],link:null},
-    ];
-
-    const SKILLS=[
-      {label:"Product Execution",color:NAVY,items:["Sprint Planning","Jira","UAT Management","Release Notes","Go-live Checklists","User Guides","PRDs"]},
-      {label:"Stakeholder Mgmt",color:PURPLE,items:["Engineering ↔ Client Liaison","Status Updates","KT Documentation","Mid-engagement Onboarding"]},
-      {label:"Product Thinking",color:CYAN,items:["MVP Scoping","Market Gap Analysis","Build vs Buy Decisions","Distribution Planning","User Research"]},
-      {label:"Communication",color:GREEN,items:["Executive Comms","Technical Writing","Editorial Strategy","Bug Documentation"]},
-      {label:"Tools",color:AMBER,items:["Jira","Notion","React (basic)","Supabase","Claude Code","Figma (basic)","Capacitor"]},
-    ];
-
-    const EDU=[
-      {type:"degree",icon:"🎓",institution:"MBA",course:"Marketing & Operations",color:NAVY,
-       detail:"Specialisation in Marketing and Operations Management. Foundation for product strategy, go-to-market thinking, and operational process design."},
-      {type:"degree",icon:"🎓",institution:"BE Civil Engineering",course:"Bachelor of Engineering",color:NAVY,
-       detail:"Technical undergraduate foundation. Developed systems thinking and structural problem-solving - directly applicable to product architecture conversations."},
-      {type:"cert",icon:"📜",institution:"Indian School of Business (ISB)",course:"Product Management",color:PURPLE,
-       detail:"Executive Education programme in Product Management from ISB - India's top-ranked business school. Covered product strategy, roadmapping, user research, and go-to-market execution."},
-      {type:"cert",icon:"📜",institution:"INSEAD",course:"Design Thinking and Creativity for Business",color:CYAN,
-       detail:"Certificate in Design Thinking and Creativity for Business from INSEAD. Covered human-centred design, creative problem solving, and applying design thinking frameworks to business challenges."},
-      {type:"cert",icon:"📜",institution:"Harvard Business School Online",course:"Business Strategy",color:"#A21CAF",
-       detail:"Business Strategy certificate from Harvard Business School Online. Covered competitive positioning, value creation, and strategic decision-making through HBS's case-based learning approach."},
-    ];
-
-    function App(){
-      const [activeCase,setActiveCase]=useState("erm");
-      const [expanded,setExpanded]=useState({});
-      const [activeSkill,setActiveSkill]=useState(null);
-      const [expandedEdu,setExpandedEdu]=useState({});
-
-      const study=CASES.find(c=>c.id===activeCase);
-      const isExp=expanded[activeCase];
-      const visible=isExp?study.items:study.items.slice(0,3);
-
-      return (
-        <div style={{fontFamily:"'Inter',system-ui,sans-serif",background:BG,minHeight:"100vh",color:TEXT}}>
-
-          {/* NAV */}
-          <nav style={{background:"rgba(255,255,255,0.97)",backdropFilter:"blur(8px)",
-            borderBottom:`1px solid ${BORDER}`,position:"sticky",top:0,zIndex:100}}>
-            <div style={{maxWidth:980,margin:"0 auto",padding:"0 24px",
-              display:"flex",alignItems:"center",justifyContent:"space-between",height:54}}>
-              <div style={{display:"flex",alignItems:"center",gap:8}}>
-                <div style={{width:30,height:30,background:NAVY,borderRadius:7,
-                  display:"flex",alignItems:"center",justifyContent:"center"}}>
-                  <span style={{color:CYAN,fontSize:14,fontWeight:800}}>SP</span>
-                </div>
-                <span style={{fontWeight:700,fontSize:15,color:NAVY}}>Sidhanth Prasad</span>
-              </div>
-              <div style={{display:"flex",gap:2,flexWrap:"wrap"}}>
-                {NAV.map(l=>(
-                  <button key={l.label} onClick={()=>scrollTo(l.id)}
-                    style={{fontSize:13,fontWeight:500,color:MUTED,background:"none",
-                      border:"none",cursor:"pointer",padding:"6px 10px",borderRadius:6}}>
-                    {l.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </nav>
-
-          {/* HERO */}
-          <section id="about" style={{background:`linear-gradient(135deg,${NAVY} 0%,#1A3A6B 100%)`,
-            padding:"64px 24px 56px"}}>
-            <div style={{maxWidth:720,margin:"0 auto",textAlign:"center"}}>
-              <span style={{display:"inline-block",fontSize:11,fontWeight:700,color:CYAN,
-                letterSpacing:"0.12em",textTransform:"uppercase",marginBottom:18,
-                background:`${CYAN}20`,padding:"5px 16px",borderRadius:20,
-                border:`1px solid ${CYAN}40`}}>Open to Senior PM Roles</span>
-              <h1 style={{fontSize:52,fontWeight:800,color:WHITE,margin:"0 0 4px",
-                letterSpacing:"-0.02em",lineHeight:1.1}}>Sidhanth Prasad</h1>
-              <p style={{fontSize:15,color:"#94A3B8",marginBottom:28}}>
-                Product Manager · Bangalore, India ·{" "}
-                <a href="https://growwithsid.com" target="_blank"
-                  style={{color:CYAN,textDecoration:"none"}}>growwithsid.com</a>
-              </p>
-              <p style={{fontSize:17,color:"#CBD5E1",lineHeight:1.75,marginBottom:36,
-                maxWidth:580,margin:"0 auto 36px"}}>
-                I run sprints, ship docs, keep stakeholders aligned, and build consumer apps on the side.
-                Two enterprise AI products live with real users. Three consumer apps built or in progress.
-              </p>
-              <div style={{display:"flex",gap:10,justifyContent:"center",flexWrap:"wrap",marginBottom:32}}>
-                {["Enterprise GenAI","B2B SaaS","Consumer Fintech","India Market","0-to-1 Builds"].map(t=>(
-                  <span key={t} style={{fontSize:12,fontWeight:600,color:"#CBD5E1",
-                    background:"rgba(255,255,255,0.08)",padding:"5px 14px",
-                    borderRadius:20,border:"1px solid rgba(255,255,255,0.14)"}}>{t}</span>
-                ))}
-              </div>
-              <div style={{display:"flex",gap:12,justifyContent:"center",flexWrap:"wrap"}}>
-                <a href="https://www.linkedin.com/in/sidhanthprasad/" target="_blank"
-                  style={{display:"inline-block",padding:"10px 24px",borderRadius:8,
-                    background:CYAN,color:WHITE,fontWeight:600,fontSize:14,textDecoration:"none"}}>
-                  LinkedIn →
-                </a>
-                <button onClick={()=>scrollTo("contact")}
-                  style={{padding:"10px 24px",borderRadius:8,background:"transparent",
-                    color:WHITE,fontWeight:600,fontSize:14,cursor:"pointer",
-                    border:"1.5px solid rgba(255,255,255,0.3)"}}>
-                  Get in Touch
-                </button>
-              </div>
-            </div>
-          </section>
-
-          {/* STATS */}
-          <div style={{background:WHITE,borderBottom:`1px solid ${BORDER}`}}>
-            <div style={{maxWidth:980,margin:"0 auto",
-              display:"grid",gridTemplateColumns:"repeat(4,1fr)"}}>
-              {[
-                {n:"2",label:"Enterprise AI products live"},
-                {n:"3",label:"Consumer apps built"},
-                {n:"2",label:"Jira boards managed"},
-                {n:"3",label:"Global exec certs"},
-              ].map(s=>(
-                <div key={s.label} style={{padding:"20px 16px",textAlign:"center",
-                  borderRight:`1px solid ${BORDER}`}}>
-                  <div style={{fontSize:30,fontWeight:800,color:NAVY}}>{s.n}</div>
-                  <div style={{fontSize:12,color:MUTED,marginTop:4,lineHeight:1.4}}>{s.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* IDENTITY */}
-          <section style={{padding:"44px 24px 0"}}>
-            <div style={{maxWidth:980,margin:"0 auto",
-              display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:16}}>
-              {[
-                {icon:"⚙️",title:"I execute, not just strategise",
-                 desc:"Sprint planning, UAT cycles, release notes, go-live checklists - I own the delivery loop end to end."},
-                {icon:"🔗",title:"I speak both languages",
-                 desc:"Engineering ↔ client stakeholder liaison. I translate between technical reality and business expectation without losing either side."},
-                {icon:"🧭",title:"I scope tightly",
-                 desc:"I ask 'what's the minimum useful thing?' before adding scope. My MVPs ship because I cut aggressively and justify every cut."},
-              ].map(c=>(
-                <Card key={c.title} style={{padding:22}}>
-                  <div style={{fontSize:26,marginBottom:10}}>{c.icon}</div>
-                  <h3 style={{fontSize:15,fontWeight:700,color:NAVY,margin:"0 0 8px"}}>{c.title}</h3>
-                  <p style={{fontSize:13,color:MUTED,margin:0,lineHeight:1.6}}>{c.desc}</p>
-                </Card>
-              ))}
-            </div>
-          </section>
-
-          {/* EXPERIENCE */}
-          <section id="experience" style={{padding:"44px 24px 40px"}}>
-            <div style={{maxWidth:980,margin:"0 auto"}}>
-              <h2 style={{fontSize:22,fontWeight:700,color:NAVY,margin:"0 0 4px"}}>Experience</h2>
-              <p style={{fontSize:13,color:MUTED,margin:"0 0 20px"}}>Click a tab to explore each role.</p>
-              <div style={{display:"flex",gap:8,flexWrap:"wrap",marginBottom:20}}>
-                {CASES.map(cs=>(
-                  <button key={cs.id}
-                    onClick={()=>{setActiveCase(cs.id);setExpanded(e=>({...e,[cs.id]:false}));}}
-                    style={{padding:"8px 16px",borderRadius:8,cursor:"pointer",
-                      fontSize:13,fontWeight:600,
-                      border:`1.5px solid ${activeCase===cs.id?cs.accent:BORDER}`,
-                      background:activeCase===cs.id?cs.accent:WHITE,
-                      color:activeCase===cs.id?WHITE:MUTED,transition:"all 0.15s"}}>
-                    {cs.emoji} {cs.label}
-                  </button>
-                ))}
-              </div>
-
-              <Card style={{overflow:"hidden"}}>
-                <div style={{height:4,background:study.accent}}/>
-                <div style={{padding:"26px 28px 0"}}>
-                  <div style={{display:"flex",justifyContent:"space-between",
-                    alignItems:"flex-start",gap:12,marginBottom:6}}>
-                    <div>
-                      <p style={{fontSize:11,fontWeight:700,color:MUTED,
-                        letterSpacing:"0.08em",textTransform:"uppercase",margin:"0 0 6px"}}>
-                        {study.company} · {study.period}
-                      </p>
-                      <h3 style={{fontSize:20,fontWeight:700,color:NAVY,margin:"0 0 8px"}}>{study.role}</h3>
-                      <p style={{fontSize:14,color:MUTED,margin:0,lineHeight:1.6}}>{study.summary}</p>
-                    </div>
-                    <span style={{fontSize:36,flexShrink:0}}>{study.emoji}</span>
-                  </div>
-                  <div style={{background:LCYAN,borderRadius:8,padding:"12px 16px",
-                    margin:"18px 0",borderLeft:`3px solid ${CYAN}`}}>
-                    <p style={{fontSize:11,fontWeight:700,color:NAVY,margin:"0 0 4px",
-                      textTransform:"uppercase",letterSpacing:"0.07em"}}>The Setup</p>
-                    <p style={{fontSize:13,color:TEXT,margin:0,lineHeight:1.6}}>{study.context}</p>
-                  </div>
-                  <p style={{fontSize:11,fontWeight:700,color:MUTED,
-                    letterSpacing:"0.08em",textTransform:"uppercase",margin:"0 0 14px"}}>What I Did</p>
-                </div>
-                <div style={{padding:"0 28px"}}>
-                  {visible.map((item,i)=>(
-                    <div key={i} style={{display:"flex",gap:12,padding:"10px 0",
-                      borderTop:`1px solid ${BORDER}`}}>
-                      <span style={{fontSize:18,flexShrink:0,marginTop:1}}>{item.icon}</span>
-                      <p style={{fontSize:14,color:TEXT,margin:0,lineHeight:1.6}}>{item.text}</p>
-                    </div>
-                  ))}
-                </div>
-                {study.items.length>3&&(
-                  <div style={{padding:"10px 28px 0"}}>
-                    <button onClick={()=>setExpanded(e=>({...e,[activeCase]:!e[activeCase]}))}
-                      style={{fontSize:13,fontWeight:600,color:study.accent,
-                        background:"none",border:"none",cursor:"pointer",padding:0}}>
-                      {isExp?`↑ Show less`:`↓ Show ${study.items.length-3} more`}
-                    </button>
-                  </div>
-                )}
-                <div style={{padding:"18px 28px",borderTop:`1px solid ${BORDER}`,
-                  marginTop:16,display:"flex",gap:8,flexWrap:"wrap"}}>
-                  {study.skills.map(s=><Tag key={s} color={study.accent}>{s}</Tag>)}
-                </div>
-              </Card>
-            </div>
-          </section>
-
-          {/* BUILDS */}
-          <section id="builds" style={{padding:"0 24px 40px"}}>
-            <div style={{maxWidth:980,margin:"0 auto"}}>
-              <h2 style={{fontSize:22,fontWeight:700,color:NAVY,margin:"0 0 4px"}}>Side Builds</h2>
-              <p style={{fontSize:13,color:MUTED,margin:"0 0 20px"}}>Products I scoped, designed, and shipped (or am shipping) myself.</p>
-              <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:16}}>
-                {BUILDS.map(b=>(
-                  <Card key={b.name} style={{padding:22,display:"flex",flexDirection:"column"}}>
-                    <div style={{display:"flex",justifyContent:"space-between",
-                      alignItems:"flex-start",marginBottom:12}}>
-                      <span style={{fontSize:30}}>{b.emoji}</span>
-                      <span style={{fontSize:10,fontWeight:700,color:b.statusColor,
-                        background:`${b.statusColor}15`,padding:"3px 10px",
-                        borderRadius:20,border:`1px solid ${b.statusColor}30`}}>{b.status}</span>
-                    </div>
-                    <h3 style={{fontSize:14,fontWeight:700,color:NAVY,margin:"0 0 8px"}}>{b.name}</h3>
-                    <p style={{fontSize:13,color:MUTED,lineHeight:1.6,margin:"0 0 14px",flex:1}}>{b.desc}</p>
-                    <div style={{display:"flex",gap:6,flexWrap:"wrap",
-                      marginBottom:b.link?12:0}}>
-                      {b.tags.map(t=><Tag key={t} color={MUTED}>{t}</Tag>)}
-                    </div>
-                    {b.link&&(
-                      <a href={b.link} target="_blank"
-                        style={{display:"inline-block",marginTop:4,padding:"7px 16px",
-                          background:NAVY,color:WHITE,fontSize:12,fontWeight:600,
-                          borderRadius:7,textDecoration:"none",textAlign:"center"}}>
-                        Visit Site →
-                      </a>
-                    )}
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* SKILLS */}
-          <section id="skills" style={{padding:"0 24px 40px"}}>
-            <div style={{maxWidth:980,margin:"0 auto"}}>
-              <h2 style={{fontSize:22,fontWeight:700,color:NAVY,margin:"0 0 4px"}}>Skills</h2>
-              <p style={{fontSize:13,color:MUTED,margin:"0 0 16px"}}>Click a category to highlight it.</p>
-              <div style={{display:"flex",gap:8,flexWrap:"wrap",marginBottom:16}}>
-                {SKILLS.map(g=>(
-                  <button key={g.label}
-                    onClick={()=>setActiveSkill(activeSkill===g.label?null:g.label)}
-                    style={{padding:"6px 14px",borderRadius:8,cursor:"pointer",
-                      fontSize:12,fontWeight:600,
-                      border:`1.5px solid ${activeSkill===g.label?g.color:BORDER}`,
-                      background:activeSkill===g.label?g.color:WHITE,
-                      color:activeSkill===g.label?WHITE:MUTED,transition:"all 0.15s"}}>
-                    {g.label}
-                  </button>
-                ))}
-              </div>
-              <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:14}}>
-                {SKILLS.map(g=>{
-                  const active=!activeSkill||activeSkill===g.label;
-                  return(
-                    <Card key={g.label} style={{padding:18,opacity:active?1:0.3,transition:"opacity 0.2s"}}>
-                      <p style={{fontSize:11,fontWeight:700,color:g.color,
-                        textTransform:"uppercase",letterSpacing:"0.08em",margin:"0 0 12px"}}>{g.label}</p>
-                      <div style={{display:"flex",gap:7,flexWrap:"wrap"}}>
-                        {g.items.map(s=><Tag key={s} color={g.color}>{s}</Tag>)}
-                      </div>
-                    </Card>
-                  );
-                })}
-              </div>
-            </div>
-          </section>
-
-          {/* EDUCATION */}
-          <section id="education" style={{padding:"0 24px 40px"}}>
-            <div style={{maxWidth:980,margin:"0 auto"}}>
-              <h2 style={{fontSize:22,fontWeight:700,color:NAVY,margin:"0 0 20px"}}>Education & Certifications</h2>
-              <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:14}}>
-                {EDU.map((item,i)=>(
-                  <Card key={i} style={{overflow:"hidden"}}>
-                    <div style={{height:3,background:item.color}}/>
-                    <div style={{padding:"16px 18px"}}>
-                      <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:12}}>
-                        <div style={{width:40,height:40,borderRadius:10,flexShrink:0,
-                          background:item.type==="degree"?NAVY:`${item.color}15`,
-                          display:"flex",alignItems:"center",justifyContent:"center",fontSize:18}}>
-                          {item.icon}
-                        </div>
-                        <div>
-                          <p style={{fontSize:14,fontWeight:700,color:NAVY,margin:"0 0 2px"}}>{item.institution}</p>
-                          <p style={{fontSize:12,color:MUTED,margin:0}}>{item.course}</p>
-                        </div>
-                      </div>
-                      <p style={{fontSize:13,color:TEXT,lineHeight:1.65,
-                        margin:0,paddingTop:12,borderTop:`1px solid ${BORDER}`}}>
-                        {item.detail}
-                      </p>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* CONTACT */}
-          <section id="contact" style={{padding:"0 24px 60px"}}>
-            <div style={{maxWidth:980,margin:"0 auto"}}>
-              <Card style={{padding:"36px 32px",textAlign:"center",
-                background:`linear-gradient(135deg,${NAVY},#1A3A6B)`}}>
-                <h2 style={{fontSize:24,fontWeight:700,color:WHITE,margin:"0 0 10px"}}>Let's talk product</h2>
-                <p style={{fontSize:14,color:"#94A3B8",margin:"0 0 28px",lineHeight:1.7}}>
-                  Open to senior PM roles in enterprise AI, B2B SaaS, and consumer fintech.<br/>
-                  Based in Bangalore - open to remote and hybrid.
-                </p>
-                <div style={{display:"flex",gap:12,justifyContent:"center",flexWrap:"wrap"}}>
-                  <a href="https://www.linkedin.com/in/sidhanthprasad/" target="_blank"
-                    style={{padding:"10px 24px",borderRadius:8,background:CYAN,
-                      color:WHITE,fontWeight:600,fontSize:14,textDecoration:"none"}}>
-                    LinkedIn
-                  </a>
-                  <a href="https://calendly.com/sidhanthprasad/strategy-call-with-sid-45-minutes" target="_blank"
-                    style={{padding:"10px 24px",borderRadius:8,
-                      background:"rgba(255,255,255,0.1)",color:WHITE,fontWeight:600,
-                      fontSize:14,textDecoration:"none",border:"1.5px solid rgba(255,255,255,0.25)"}}>
-                    Book a Call
-                  </a>
-                  <a href="https://growwithsid.com" target="_blank"
-                    style={{padding:"10px 24px",borderRadius:8,
-                      background:"rgba(255,255,255,0.1)",color:WHITE,fontWeight:600,
-                      fontSize:14,textDecoration:"none",border:"1.5px solid rgba(255,255,255,0.25)"}}>
-                    growwithsid.com
-                  </a>
-                </div>
-              </Card>
-            </div>
-          </section>
-
-          {/* FOOTER */}
-          <div style={{background:NAVY,padding:"20px 24px",textAlign:"center"}}>
-            <p style={{fontSize:12,color:"#475569",margin:0}}>
-              Sidhanth Prasad · PM Portfolio · 2026 · Bangalore, India
-            </p>
-          </div>
-
+ 
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#">
+      <div class="logo-box">SP</div>
+      <div><span class="logo-title">Sidhanth Prasad</span><span class="logo-sub">Product Manager</span></div>
+    </a>
+    <div class="nav-links">
+      <button onclick="goTo('products')">Products</button>
+      <button onclick="goTo('case-study')">Case Study</button>
+      <button onclick="goTo('skills')">Skills</button>
+      <button onclick="goTo('education')">Education</button>
+      <button onclick="goTo('contact')">Contact</button>
+    </div>
+  </div>
+</nav>
+ 
+<!-- HERO -->
+<section class="hero grid-bg">
+  <div class="inner">
+    <div class="open-badge fade1"><span class="live-dot"></span>Open to Senior PM Roles</div>
+    <h1 class="fade2">Sidhanth Prasad</h1>
+    <p class="hero-role fade2">Product Manager | Enterprise AI Products | 6+ Years Building Internal Tools, Data Products &amp; AI Workflows</p>
+    <p class="hero-desc fade3">BCG and ISG consulting background. Now shipping enterprise GenAI products as an embedded PM and building consumer apps on the side. I frame the problem before I solve it, measure what matters, and own delivery end to end.</p>
+    <div class="stat-row fade3">
+      <div class="stat"><div class="stat-n">4</div><div class="stat-l">Enterprise products shipped</div></div>
+      <div class="stat"><div class="stat-n">6+</div><div class="stat-l">Years in consulting</div></div>
+      <div class="stat"><div class="stat-n">70+</div><div class="stat-l">Published research reports</div></div>
+      <div class="stat"><div class="stat-n" style="font-size:12px">ISB·INSEAD·HBS</div><div class="stat-l">Executive education</div></div>
+    </div>
+    <div class="hero-btns fade4">
+      <a class="btn-p" href="https://www.linkedin.com/in/sidhanthprasad/" target="_blank">LinkedIn &rarr;</a>
+      <a class="btn-o" href="https://calendly.com/sidhanthprasad/strategy-call-with-sid-45-minutes" target="_blank">Book a Call</a>
+      <a class="btn-o" href="https://growwithsid.com" target="_blank">growwithsid.com</a>
+    </div>
+  </div>
+</section>
+ 
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="inner">
+    <div class="sec-label">What I've Built</div>
+    <h2 class="sec-h">Products</h2>
+    <p class="sec-sub">Enterprise AI platforms and internal tools shipped with real users. Click any card to expand decisions and outcomes.</p>
+    <div class="prod-grid" id="prod-grid"></div>
+  </div>
+</section>
+ 
+<!-- SHIPPED TABLE -->
+<section class="alt">
+  <div class="inner">
+    <div class="sec-label">Full Track Record</div>
+    <h2 class="sec-h" style="margin-bottom:20px">Products I've Shipped</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Product</th><th>Stage</th><th>Users</th><th>My Contribution</th><th>Key Metric</th></tr></thead>
+        <tbody id="shipped-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+ 
+<!-- CASE STUDY -->
+<section id="case-study">
+  <div class="inner">
+    <div class="sec-label">PM Thinking in Action</div>
+    <h2 class="sec-h">Case Study: From Invisible Failure to Automated System</h2>
+    <p class="sec-sub">A critical operational problem nobody had named - how I identified it, built the business case, and scoped the fix before it became a go-live incident.</p>
+ 
+    <!-- Context bar -->
+    <div style="background:#0D1829;border:1px solid #1C3050;border-radius:12px;padding:16px 20px;margin-bottom:28px;display:flex;gap:24px;flex-wrap:wrap">
+      <div><div style="font-size:9px;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:.09em;margin-bottom:4px">Product</div><div style="font-size:13px;font-weight:600;color:#F1F5F9">Enterprise GenAI Platform</div></div>
+      <div style="width:1px;background:#1C3050"></div>
+      <div><div style="font-size:9px;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:.09em;margin-bottom:4px">My Role</div><div style="font-size:13px;font-weight:600;color:#F1F5F9">Embedded Product Manager</div></div>
+      <div style="width:1px;background:#1C3050"></div>
+      <div><div style="font-size:9px;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:.09em;margin-bottom:4px">Problem Type</div><div style="font-size:13px;font-weight:600;color:#F1F5F9">Operational Risk / Zero Observability</div></div>
+      <div style="width:1px;background:#1C3050"></div>
+      <div><div style="font-size:9px;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:.09em;margin-bottom:4px">Outcome</div><div style="font-size:13px;font-weight:600;color:#10B981">Manual chain eliminated</div></div>
+    </div>
+ 
+    <!-- Framework steps -->
+    <div class="fw-steps" id="fw-steps"></div>
+    <div id="fw-content" style="margin-bottom:28px"></div>
+ 
+    <!-- Before / After -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="background:#0D1829;border:1px solid #EF444430;border-radius:12px;padding:20px">
+        <div style="font-size:10px;font-weight:700;color:#EF4444;text-transform:uppercase;letter-spacing:.09em;margin-bottom:14px">&#10005; Before</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:#EF4444;font-size:13px;flex-shrink:0;margin-top:1px">&#10007;</span><span style="font-size:12px;color:#94A3B8;line-height:1.5">9-step fully manual provisioning chain with no documentation</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:#EF4444;font-size:13px;flex-shrink:0;margin-top:1px">&#10007;</span><span style="font-size:12px;color:#94A3B8;line-height:1.5">Zero visibility into provisioning status for users</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:#EF4444;font-size:13px;flex-shrink:0;margin-top:1px">&#10007;</span><span style="font-size:12px;color:#94A3B8;line-height:1.5">No error state, no retry mechanism, no alerting</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:#EF4444;font-size:13px;flex-shrink:0;margin-top:1px">&#10007;</span><span style="font-size:12px;color:#94A3B8;line-height:1.5">Failures discovered by users manually checking SharePoint</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:#EF4444;font-size:13px;flex-shrink:0;margin-top:1px">&#10007;</span><span style="font-size:12px;color:#94A3B8;line-height:1.5">No owner, no SLA, workaround was a Slack ping to admin</span></div>
         </div>
-      );
-    }
-
-    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
-  </script>
+      </div>
+      <div style="background:#0D1829;border:1px solid #10B98130;border-radius:12px;padding:20px">
+        <div style="font-size:10px;font-weight:700;color:#10B981;text-transform:uppercase;letter-spacing:.09em;margin-bottom:14px">&#10003; After</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:#10B981;font-size:13px;flex-shrink:0;margin-top:1px">&#10003;</span><span style="font-size:12px;color:#CBD5E1;line-height:1.5">Automated trigger replaces all 9 manual steps on project creation</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:#10B981;font-size:13px;flex-shrink:0;margin-top:1px">&#10003;</span><span style="font-size:12px;color:#CBD5E1;line-height:1.5">Real-time provisioning status visible to users in the platform</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:#10B981;font-size:13px;flex-shrink:0;margin-top:1px">&#10003;</span><span style="font-size:12px;color:#CBD5E1;line-height:1.5">Automatic error detection with retry logic and failure alerts</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:#10B981;font-size:13px;flex-shrink:0;margin-top:1px">&#10003;</span><span style="font-size:12px;color:#CBD5E1;line-height:1.5">Admin monitoring dashboard with full provisioning visibility</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:#10B981;font-size:13px;flex-shrink:0;margin-top:1px">&#10003;</span><span style="font-size:12px;color:#CBD5E1;line-height:1.5">System owns the process - defined owner, defined SLA, zero manual retries</span></div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- PM takeaway -->
+    <div style="background:linear-gradient(135deg,rgba(14,165,201,.08),rgba(139,92,246,.08));border:1px solid rgba(14,165,201,.2);border-radius:12px;padding:20px 24px;margin-top:14px">
+      <div style="font-size:10px;font-weight:700;color:#0EA5C9;text-transform:uppercase;letter-spacing:.09em;margin-bottom:8px">The PM Lesson</div>
+      <p style="font-size:14px;color:#CBD5E1;line-height:1.75">Engineering had flagged this problem before. Nobody acted. The difference was reframing it from a technical debt item into a business risk with a cost - consultant downtime, project delays, go-live exposure. The same fix, with a business case attached, got stakeholder sign-off immediately. Product management is often about finding the frame that makes the right thing obvious.</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- SKILLS -->
+<section id="skills" class="alt">
+  <div class="inner">
+    <div class="sec-label">Competencies</div>
+    <h2 class="sec-h">Skills</h2>
+    <div class="skill-filter" id="skill-filter"></div>
+    <div class="skill-grid" id="skill-grid"></div>
+  </div>
+</section>
+ 
+<!-- EDUCATION -->
+<section id="education">
+  <div class="inner">
+    <div class="sec-label">Credentials</div>
+    <h2 class="sec-h" style="margin-bottom:20px">Education &amp; Certifications</h2>
+    <div class="edu-grid" id="edu-grid"></div>
+  </div>
+</section>
+ 
+<!-- THOUGHT LEADERSHIP -->
+<section class="alt" style="padding:32px 28px">
+  <div class="inner">
+    <div class="tl-card">
+      <div>
+        <div class="sec-label" style="margin-bottom:4px">Thought Leadership</div>
+        <div style="font-size:17px;font-weight:700;color:#F1F5F9;margin-bottom:4px">growwithsid.com</div>
+        <div style="font-size:13px;color:#64748B;max-width:520px">AI and tech intelligence for founders and operators. The articles support the product work - lessons from shipping, not just opinions about shipping.</div>
+      </div>
+      <a class="tl-link" href="https://growwithsid.com" target="_blank">Read the publication &rarr;</a>
+    </div>
+  </div>
+</section>
+ 
+<!-- CONTACT -->
+<section id="contact" class="contact-sec" style="border-bottom:none">
+  <div class="inner">
+    <div class="sec-label" style="justify-content:center;display:flex;margin-bottom:10px">Get in Touch</div>
+    <div class="contact-h">Let's talk product.</div>
+    <p class="contact-sub">Open to senior PM roles in enterprise AI, B2B SaaS, and consumer fintech.<br>Based in Bangalore - open to remote and hybrid.</p>
+    <div class="contact-btns">
+      <a class="btn-p" href="https://www.linkedin.com/in/sidhanthprasad/" target="_blank">LinkedIn</a>
+      <a class="btn-o" href="https://calendly.com/sidhanthprasad/strategy-call-with-sid-45-minutes" target="_blank">Book a Call</a>
+      <a class="btn-o" href="https://growwithsid.com" target="_blank">growwithsid.com</a>
+    </div>
+  </div>
+</section>
+ 
+<footer><p>Sidhanth Prasad &middot; PM Portfolio &middot; 2026 &middot; Bangalore, India</p></footer>
+ 
+<script>
+function goTo(id){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+ 
+var PRODUCTS=[
+  {id:'r',name:'AI Report Drafting Tool',co:'Greychain AI &middot; Global Consulting Firm',status:'Live',sc:'#10B981',accent:'#0EA5C9',
+   problem:'Consultants spent the majority of report-writing time on structured, repeatable sections - manually transferring raw data into formatted deliverables. Zero automation, every report from scratch.',
+   users:'Senior environmental consultants and project managers at a global top-5 consultancy.',
+   role:'Embedded PM - owned product roadmap, sprint planning, requirements, UAT cycles, stakeholder management, and go-live coordination end to end.',
+   decisions:['Template-driven generation over freeform AI - prioritised reliability and domain accuracy over flexibility in v1.','Phased UAT by document type to surface domain-specific edge cases before go-live.','Deferred SharePoint auto-provisioning to v2 after identifying a 9-step manual chain risk pre-launch.'],
+   outcome:'Live with active enterprise users. Consultants shifted time from formatting to insight generation.',
+   skills:['Sprint Planning','Jira','UAT','Stakeholder Comms','Go-live Planning','Requirements']},
+  {id:'v',name:'Document Intelligence Platform',co:'Greychain AI &middot; Global Consulting Firm',status:'Live',sc:'#10B981',accent:'#8B5CF6',
+   problem:'Project teams manually cross-referenced hundreds of documents during intake and due diligence. Slow, error-prone, and completely unscalable as project volume grew.',
+   users:'Project managers and deal teams at a global consulting firm.',
+   role:'PM - product discovery, requirements definition, sprint planning across both Jira boards, UAT, go-live coordination and stakeholder communication.',
+   decisions:['Search and retrieval accuracy as v1 north star metric - not summarization, which was harder to validate.','Strict document parsing acceptance criteria defined before UAT began - no ambiguity on what done meant.','Admin visibility features prioritised in early sprints so the team could monitor system health from day one.'],
+   outcome:'Live with active users. Document review cycles accelerated. Admin team has real-time monitoring.',
+   skills:['Product Discovery','PRDs','Sprint Planning','UAT','Go-live Planning','Stakeholder Mgmt']},
+  {id:'b',name:'Internal AI Research Platform',co:'Boston Consulting Group &middot; Internal Product',status:'Internal Live',sc:'#F59E0B',accent:'#10B981',
+   problem:'Research across BCG case teams was siloed. Analysts duplicated effort, insights were not discoverable across teams, and searching proprietary research was entirely manual.',
+   users:'BCG analysts, consultants, and knowledge management teams across multiple practice areas.',
+   role:'Product scoping - identified the unmet need through cross-team synthesis, defined requirements, co-built with engineering, tracked adoption post-launch.',
+   decisions:['Search-first architecture over generation-first - discoverability was the core problem, not content creation.','Cross-team discoverability as the primary success metric, not individual usage.','Weekly active usage as the adoption north star - one-time access would not validate the product.'],
+   outcome:'Used weekly across BCG case teams. Measurable improvement in research velocity and time-to-hypothesis.',
+   skills:['Product Scoping','Requirements','Adoption Tracking','Stakeholder Comms','Problem Framing']},
+  {id:'i',name:'Competitive Intelligence Dashboard',co:'Information Services Group &middot; Internal Tool',status:'Internal Live',sc:'#F59E0B',accent:'#F59E0B',
+   problem:'Analysts manually pulled competitor data from multiple disconnected sources. Refresh cycle was slow, error-prone, and produced a different view for every team member.',
+   users:'ISG research analysts across the digital transformation practice.',
+   role:'Applied structured user research to understand the real problem, redesigned from scratch, built SQL and Power BI automation to replace the manual pipeline.',
+   decisions:['Ran user research before redesigning - discovered refresh speed was the bottleneck, not data breadth.','Automated data pipeline over manual exports - eliminated the source of inconsistency between teams.','Cross-team adoption as the success metric - a tool only used by one team had already failed.'],
+   outcome:'35% faster data refresh. Cross-team adoption. 30% reduction in manual competitor tracking effort.',
+   skills:['User Research','Product Redesign','SQL','Power BI','Data Analysis','Benchmarking']},
+];
+ 
+var SHIPPED=[
+  {p:'AI Report Drafting Tool',s:'Live',sc:'#10B981',u:'Enterprise Consultants',c:'Product Strategy &middot; Roadmap &middot; Sprint Planning &middot; UAT &middot; Go-live',m:'Active enterprise users'},
+  {p:'Document Intelligence Platform',s:'Live',sc:'#10B981',u:'Project & Deal Teams',c:'Discovery &middot; Requirements &middot; Sprint Planning &middot; UAT &middot; Stakeholder Mgmt',m:'Accelerated review cycles'},
+  {p:'BCG Internal Research Platform',s:'Internal Live',sc:'#F59E0B',u:'BCG Consultants',c:'Product Scoping &middot; Requirements &middot; Co-build &middot; Adoption Tracking',m:'Used weekly cross-team'},
+  {p:'ISG Intelligence Dashboard',s:'Internal Live',sc:'#F59E0B',u:'Research Analysts',c:'User Research &middot; Redesign &middot; SQL + Power BI Automation',m:'35% faster refresh'},
+  {p:'buildinagent.com',s:'Shipped',sc:'#0EA5C9',u:'LLM Developers',c:'0-to-1 &middot; Product &middot; Build &middot; Distribution',m:'Live'},
+  {p:'Daylog',s:'Built',sc:'#0EA5C9',u:'Consumer',c:'0-to-1 &middot; Product &middot; Build &middot; ASO Planning',m:'Play Store ready'},
+];
+ 
+var FRAMEWORK={
+  problem:{label:'Problem',icon:'🎯',color:'#0EA5C9',
+    text:'Every new project on the platform triggered a SharePoint folder provisioning process. When it worked, nobody noticed. When it failed - and it failed regularly - there was no error state, no notification, and no retry mechanism. Users discovered failures by manually checking SharePoint, sometimes hours or days later. A consultant waiting for a folder that would never arrive had no way of knowing that.',
+    insight:'The surface problem was failed provisioning. The real problem was zero observability - users had no feedback loop at all.'},
+  users:{label:'Users',icon:'👥',color:'#8B5CF6',
+    text:'Project managers and senior consultants setting up new projects on the AI platform. These were time-constrained professionals, often working to client deadlines, who needed their tools to work without supervision. Being blocked by invisible infrastructure for hours was not just frustrating - it had a direct cost in billable hours and client confidence.',
+    insight:'The user is not a developer comfortable with ambiguity. They are a consultant who expects enterprise software to behave like enterprise software.'},
+  discovery:{label:'Discovery',icon:'🔍',color:'#F59E0B',
+    text:'I observed two project managers setting up new projects during onboarding. Both manually checked SharePoint after creating the project - without being prompted to. When I asked why, one said: "You just check. Sometimes it takes a while." I then mapped the provisioning chain end to end for the first time. It had 9 steps. None of them were documented. None had an error state.',
+    insight:'The workaround had become so embedded that users no longer saw it as a workaround. That is when a problem is most dangerous - when people have stopped expecting it to be fixed.'},
+  insight:{label:'Insight',icon:'💡',color:'#10B981',
+    text:'Users were not doing this because they wanted to. They had no choice. The manual check, the Slack ping to admin, the 10-minute wait - these were rational responses to a system that gave them nothing. The normalisation of the workaround meant the problem had never been formally escalated. It was invisible to product and engineering because users had adapted around it.',
+    insight:'Problems that have been worked around are harder to surface than problems that cause visible failures. The absence of complaints is not the same as the absence of a problem.'},
+  solution:{label:'Solution',icon:'⚡',color:'#0EA5C9',
+    text:'I scoped 4 Jira tickets: (1) Automated provisioning trigger to replace the 9-step manual chain, (2) Real-time status visibility in the platform so users always know what is happening, (3) Error detection with automatic retry logic and failure alerting, (4) Admin monitoring dashboard. I brought the business case to stakeholders framed as consultant downtime and go-live risk - not technical debt. Engineering had flagged this before without result. With a business case it got sign-off immediately.',
+    insight:'The technical scope had not changed. What changed was the frame. Reframing from "nice to fix" to "blocking go-live" is a product skill, not a technical one.'},
+  impact:{label:'Impact',icon:'📈',color:'#10B981',
+    text:'The 9-step manual provisioning chain was eliminated. Users gained real-time status visibility. Admins gained a monitoring dashboard with error alerting. The process went from having no owner and no SLA to having both. Zero manual retries were required post-implementation. More importantly: a problem that had been invisible for months became a solved system.',
+    insight:'The measure of success was not just the automation. It was that nobody had to think about provisioning anymore. That is what good infrastructure feels like.'},
+};
+ 
+var SKILLS=[
+  {cat:'Product Execution',color:'#0EA5C9',items:['Sprint Planning','Jira','UAT Management','PRDs','Release Notes','Go-live Checklists','Risk Identification','KT Documentation']},
+  {cat:'Strategy & Framing',color:'#10B981',items:['Problem Definition','Opportunity Sizing','Business Case Writing','C-suite Comms','Stakeholder Framing','Competitive Intelligence']},
+  {cat:'Product Thinking',color:'#8B5CF6',items:['MVP Scoping','Build vs Buy Decisions','User Research','Market Gap Analysis','Feature Prioritisation','Distribution Planning']},
+  {cat:'Communication',color:'#F59E0B',items:['Executive Presentations','Technical Writing','Published Research (70+)','Editorial Strategy','Bug Documentation']},
+  {cat:'Tools & Tech',color:'#64748B',items:['Jira','Notion','SQL','Power BI','React (basic)','Supabase','Claude Code','SAP (exposure)']},
+];
+ 
+var EDU=[
+  {name:'MBA',course:'Marketing & Operations',icon:'🎓',color:'#0EA5C9'},
+  {name:'BE Civil Engineering',course:'Bachelor of Engineering',icon:'🎓',color:'#0EA5C9'},
+  {name:'Indian School of Business',course:'Product Management',icon:'📜',color:'#8B5CF6'},
+  {name:'INSEAD',course:'Design Thinking & Creativity for Business',icon:'📜',color:'#10B981'},
+  {name:'Harvard Business School Online',course:'Business Strategy',icon:'📜',color:'#F59E0B'},
+];
+ 
+var expanded={};
+var activeStep='problem';
+var activeSkill=null;
+ 
+function badge(s,c){
+  return '<span class="badge" style="background:'+c+'18;color:'+c+';border:1px solid '+c+'35"><span class="bdot" style="background:'+c+'"></span>'+s+'</span>';
+}
+ 
+function renderProducts(){
+  var g=document.getElementById('prod-grid');
+  g.innerHTML=PRODUCTS.map(function(p){
+    var ex=expanded[p.id];
+    return '<div class="pc" id="pc-'+p.id+'" style="border-color:'+(ex?p.accent+'60':'#1C3050')+'" onclick="toggleProd(\''+p.id+'\')">'
+      +'<div class="pc-bar" style="background:linear-gradient(90deg,'+p.accent+','+p.accent+'60)"></div>'
+      +'<div class="pc-body">'
+      +'<div class="pc-top">'+badge(p.status,p.sc)+'<span class="pc-co">'+p.co+'</span></div>'
+      +'<div class="pc-name">'+p.name+'</div>'
+      +'<div class="prob-box" style="border-color:'+p.accent+'"><div class="prob-lbl" style="color:'+p.accent+'">The Problem</div><div class="prob-txt">'+p.problem+'</div></div>'
+      +'<div class="two-col"><div class="mini-box"><div class="mini-lbl">Users</div><div class="mini-txt">'+p.users+'</div></div><div class="mini-box"><div class="mini-lbl">My Role</div><div class="mini-txt">'+p.role+'</div></div></div>'
+      +'<button class="expand-btn" style="color:'+p.accent+'" onclick="event.stopPropagation();toggleProd(\''+p.id+'\')">'+(ex?'&#8593; Hide decisions':'&#8595; Key decisions & outcome')+'</button>'
+      +(ex?'<div class="decisions-wrap">'+p.decisions.map(function(d){return '<div class="dec-row"><span class="dec-arrow" style="color:'+p.accent+'">&rarr;</span><div class="dec-txt">'+d+'</div></div>';}).join('')+'</div>'
+        +'<div class="outcome-box" style="background:'+p.accent+'10;border-color:'+p.accent+'28"><div class="out-lbl" style="color:'+p.accent+'">Outcome</div><div class="out-txt">'+p.outcome+'</div></div>':'')
+      +'</div>'
+      +'<div class="pc-skills">'+p.skills.map(function(s){return '<span class="stag" style="background:'+p.accent+'12;color:'+p.accent+';border:1px solid '+p.accent+'22">'+s+'</span>';}).join('')+'</div>'
+      +'</div>';
+  }).join('');
+}
+ 
+function toggleProd(id){expanded[id]=!expanded[id];renderProducts();}
+ 
+function renderShipped(){
+  document.getElementById('shipped-tbody').innerHTML=SHIPPED.map(function(r){
+    return '<tr><td class="td-name">'+r.p+'</td><td>'+badge(r.s,r.sc)+'</td><td>'+r.u+'</td><td style="font-size:11px;color:#94A3B8">'+r.c+'</td><td><span class="metric-pill">'+r.m+'</span></td></tr>';
+  }).join('');
+}
+ 
+function renderFramework(){
+  var s=FRAMEWORK[activeStep];
+  document.getElementById('fw-steps').innerHTML=Object.keys(FRAMEWORK).map(function(k){
+    var f=FRAMEWORK[k]; var a=(k===activeStep);
+    return '<div class="fw-step" onclick="setStep(\''+k+'\')" style="background:'+(a?f.color+'15':'#0D1829')+';border-color:'+(a?f.color:'#1C3050')+'">'
+      +'<div class="fw-step-icon">'+f.icon+'</div>'
+      +'<div class="fw-step-lbl" style="color:'+(a?f.color:'#64748B')+'">'+f.label+'</div>'
+      +'</div>';
+  }).join('');
+  document.getElementById('fw-content').innerHTML=
+    '<div class="fw-content" style="background:'+s.color+'08;border:1px solid '+s.color+'35;border-left:4px solid '+s.color+'">'
+    +'<div class="fw-header"><span class="fw-icon">'+s.icon+'</span><div><div class="fw-step-name" style="color:'+s.color+'">'+s.label+'</div><div class="fw-sub">SharePoint Ingestion &amp; Provisioning - Enterprise GenAI Platform</div></div></div>'
+    +'<div class="fw-text" style="margin-bottom:16px">'+s.text+'</div>'
+    +'<div style="background:rgba(255,255,255,.03);border-radius:8px;padding:12px 16px;border-left:3px solid '+s.color+'60">'
+    +'<span style="font-size:9px;font-weight:700;color:'+s.color+';text-transform:uppercase;letter-spacing:.09em">PM Insight - </span>'
+    +'<span style="font-size:12px;color:#94A3B8;font-style:italic;line-height:1.6">'+s.insight+'</span>'
+    +'</div>'
+    +'</div>';
+}
+ 
+function setStep(k){activeStep=k;renderFramework();}
+ 
+function renderSkills(){
+  var f=document.getElementById('skill-filter');
+  f.innerHTML='<button class="sf-btn" onclick="setSkill(null)" style="background:'+(activeSkill?'#0D1829':'#0EA5C9')+';color:'+(activeSkill?'#64748B':'#fff')+';border-color:'+(activeSkill?'#1C3050':'#0EA5C9')+'">All</button>'
+    +SKILLS.map(function(g){var a=(activeSkill===g.cat);return '<button class="sf-btn" onclick="setSkill(\''+g.cat+'\')" style="background:'+(a?g.color+'20':'#0D1829')+';color:'+(a?g.color:'#64748B')+';border-color:'+(a?g.color:'#1C3050')+'">'+g.cat+'</button>';}).join('');
+  document.getElementById('skill-grid').innerHTML=SKILLS.map(function(g){
+    var dim=(activeSkill&&activeSkill!==g.cat);
+    return '<div class="skill-card'+(dim?' dim':'')+'">'
+      +'<div class="skill-cat" style="color:'+g.color+'">'+g.cat+'</div>'
+      +'<div>'+g.items.map(function(s){return '<span class="chip" style="background:'+g.color+'12;color:'+g.color+';border:1px solid '+g.color+'22">'+s+'</span>';}).join('')+'</div>'
+      +'</div>';
+  }).join('');
+}
+ 
+function setSkill(s){activeSkill=s;renderSkills();}
+ 
+function renderEdu(){
+  document.getElementById('edu-grid').innerHTML=EDU.map(function(e){
+    return '<div class="edu-card" style="border-top-color:'+e.color+'">'
+      +'<div class="edu-icon-box" style="background:'+e.color+'15">'+e.icon+'</div>'
+      +'<div class="edu-name">'+e.name+'</div>'
+      +'<div class="edu-course" style="color:'+e.color+'">'+e.course+'</div>'
+      +'</div>';
+  }).join('');
+}
+ 
+renderProducts();renderShipped();renderFramework();renderSkills();renderEdu();
+</script>
 </body>
 </html>
+ 
